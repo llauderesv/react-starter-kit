@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component Should render w/out crashing 1`] = `
+<div
+  className="app"
+>
+  <h1>
+    React js boiler plate with Jest configuration
+  </h1>
+</div>
+`;
