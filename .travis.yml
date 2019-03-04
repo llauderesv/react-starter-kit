@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "stable"
 script:
-  - npm run test
+  - jest --no-cache --config ./jest.config.json
   - npm run prod
 on:
   branch: master
