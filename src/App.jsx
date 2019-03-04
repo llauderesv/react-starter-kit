@@ -5,7 +5,9 @@ import './App.scss';
 function App() {
   return (
     <div className="app">
-      <h1>React js boiler plate with Jest configuration</h1>
+      <div className="header">
+        <h1>Welcome to React starter kit.</h1>
+      </div>
     </div>
   );
 }

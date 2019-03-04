@@ -1,4 +1,21 @@
 body {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
+}
+
+.header {
+  width: 100%;
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  height: 300px;
+
+  h1 {
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
