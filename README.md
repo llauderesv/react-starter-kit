@@ -1,4 +1,4 @@
-# React starter kit
+# React starter kit [![Build Status](https://travis-ci.org/llauderesv/react-starter-kit.svg?branch=master)](https://travis-ci.org/llauderesv/react-starter-kit)
 
 A simple [React](https://reactjs.org/) setup using [Webpack](https://webpack.js.org/) with [Jest](https://jestjs.io/) integration.
 
