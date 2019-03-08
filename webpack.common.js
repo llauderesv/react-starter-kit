@@ -80,6 +80,14 @@ module.exports = {
           outputPath: 'assets/images',
         },
       },
+      {
+        test: /\.(otf)$/i,
+        loader: 'file-loader',
+        options: {
+          name: IsDevMode ? '[name].[ext]' : '[name].[hash].[ext]',
+          outputPath: 'assets/fonts',
+        },
+      },
     ],
   },
 };
