@@ -8,7 +8,7 @@ exports[`App Component Should render w/out crashing 1`] = `
     className="header"
   >
     <div
-      className="header-wrapper"
+      className="header-container"
     >
       <h1>
         Welcome to React starter kit.
@@ -40,7 +40,7 @@ exports[`App Component Should render w/out crashing 1`] = `
     </div>
   </div>
   <div
-    className="documentation"
+    className="steps"
   >
     <h2>
       Steps to run the project.

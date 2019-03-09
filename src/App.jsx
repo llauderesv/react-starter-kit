@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="app">
       <div className="header">
-        <div className="header-wrapper">
+        <div className="header-container">
           <h1>Welcome to React starter kit.</h1>
           <h3>A simple React setup using Webpack with Jest integration. </h3>
           <div className="build-status">
@@ -24,7 +24,7 @@ function App() {
         </div>
       </div>
 
-      <div className="documentation">
+      <div className="steps">
         <h2>Steps to run the project.</h2>
 
         <div className="code-container">
