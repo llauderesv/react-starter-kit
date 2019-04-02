@@ -4,11 +4,9 @@ import Counter from '../Counter';
 
 const Routes = () => {
   return (
-    <Fragment>
-      <Switch>
-        <Route path="/hello/:id?" component={Counter} />
-      </Switch>
-    </Fragment>
+    <Switch>
+      <Route path="/counter/:id?" component={Counter} />
+    </Switch>
   );
 };
 

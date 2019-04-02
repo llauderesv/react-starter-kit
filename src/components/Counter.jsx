@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { actionCreators } from '../reducers/counter';
 
 const Counter = ({ count, increment, decrement, match }) => {
-  console.log(match);
+  const { id } = match.params;
+
   return (
     <div>
       <h1>The current value is {count} </h1>
@@ -20,9 +20,7 @@ const Counter = ({ count, increment, decrement, match }) => {
 };
 
 // Map Counter State to Counter component
-export default withRouter(
-  connect(
-    state => state.counter,
-    dispatch => bindActionCreators(actionCreators, dispatch)
-  )(Counter)
-);
+export default connect(
+  state => state.counter,
+  dispatch => bindActionCreators(actionCreators, dispatch)
+)(Counter);

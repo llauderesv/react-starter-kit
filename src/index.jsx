@@ -1,13 +1,13 @@
 import React from 'react';
+import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import ReactDOM from 'react-dom';
-import App from './components/App';
 import configureStore, { history } from './configureStore';
+
+import App from './components/App';
 
 const store = configureStore();
 
-// Render the root element...
-ReactDOM.render(
+render(
   <Provider store={store}>
     <App history={history} />
   </Provider>,

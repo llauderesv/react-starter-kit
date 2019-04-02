@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prod": "NODE_ENV=production webpack --config ./webpack.prod.js",
-    "dev": "NODE_ENV=development webpack-dev-server --open --config ./webpack.dev.js",
+    "dev": "SET NODE_ENV=development && webpack-dev-server --open --config ./webpack.dev.js",
+    "prod": "SET NODE_ENV=production && webpack --config ./webpack.prod.js",
     "test": "jest --watchAll --no-cache --config ./jest.config.json"
   },
   "author": "Vince",
