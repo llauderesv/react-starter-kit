@@ -1,3 +1,4 @@
+/*eslint-disable */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -5,6 +6,13 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const IsDevMode = process.env.NODE_ENV.trim() !== 'production';
+
+// Put hash in asset file names when the build is in production...
+const assetFilename = IsDevMode ? '[name].[ext]' : '[name].[hash].[ext]';
+
+// css filename
+const cssFilename = IsDevMode ? '[name].css' : '[name].[contenthash].css';
+const cssChunkFilename = IsDevMode ? '[id].css' : '[id].[contenthash].css';
 
 module.exports = {
   entry: {
@@ -15,12 +23,8 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `styles/${
-        IsDevMode ? '[name].css' : '[name].[contenthash].css'
-      }`,
-      chunkFilename: `styles/${
-        IsDevMode ? '[id].css' : '[id].[contenthash].css'
-      }`,
+      filename: `styles/${cssFilename}`,
+      chunkFilename: `styles/${cssChunkFilename}`,
     }),
     new OptimizeCssAssetsPlugin({}),
     new HtmlWebpackPlugin({ template: path.relative(__dirname, 'index.html') }),
@@ -76,15 +80,15 @@ module.exports = {
         test: /\.(gif|png|jpg|jpeg|svg)$/i,
         loader: 'file-loader',
         options: {
-          name: IsDevMode ? '[name].[ext]' : '[name].[hash].[ext]',
+          name: assetFilename,
           outputPath: 'assets/images',
         },
       },
       {
-        test: /\.(otf)$/i,
+        test: /\.(otf|tff)$/i,
         loader: 'file-loader',
         options: {
-          name: IsDevMode ? '[name].[ext]' : '[name].[hash].[ext]',
+          name: assetFilename,
           outputPath: 'assets/fonts',
         },
       },
