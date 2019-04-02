@@ -1,5 +1,6 @@
 const incrementCountType = 'INC';
 const decrementCountType = 'DEC';
+
 const initialState = { count: 0 };
 
 export const actionCreators = {
@@ -7,6 +8,7 @@ export const actionCreators = {
   decrement: () => ({ type: decrementCountType }),
 };
 
+// Reducer modifying counter state
 export const reducer = (state = initialState, action) => {
   if (action.type === incrementCountType) {
     return { ...state, count: state.count + 1 };
