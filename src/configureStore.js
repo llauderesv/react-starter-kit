@@ -19,7 +19,7 @@ const configureStore = initialState => {
   return createStore(
     rootReducers(history),
     initialState, // Set the initial State in the app
-    composeEnhancer(applyMiddleware(...middlewares))
+    composeEnhancer(applyMiddleware(...middlewares)),
   );
 };
 

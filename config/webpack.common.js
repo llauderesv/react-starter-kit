@@ -1,5 +1,6 @@
 /*eslint-disable */
-const path = require('path');
+const webpack = require('webpack');
+const resolvePath = require('./path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -10,25 +11,35 @@ const IsDevMode = process.env.NODE_ENV.trim() !== 'production';
 // Put hash in asset file names when the build is in production...
 const assetFilename = IsDevMode ? '[name].[ext]' : '[name].[hash].[ext]';
 
-// css filename
+// Create hash css filename when build in production...
 const cssFilename = IsDevMode ? '[name].css' : '[name].[contenthash].css';
 const cssChunkFilename = IsDevMode ? '[id].css' : '[id].[contenthash].css';
 
 module.exports = {
+  // Entry point where in webpack first looks and serve as main page
   entry: {
-    main: path.resolve(__dirname, 'src', 'index.jsx'),
+    main: [resolvePath('src', 'index.jsx')],
   },
+  // Remove file extension when importing JavaScript files or Modules
   resolve: {
     extensions: ['.js', '.jsx'],
   },
+  // Webpack Plugins
   plugins: [
     new MiniCssExtractPlugin({
       filename: `styles/${cssFilename}`,
       chunkFilename: `styles/${cssChunkFilename}`,
     }),
+    /**
+     * Minified CSS compilation
+     */
     new OptimizeCssAssetsPlugin({}),
-    new HtmlWebpackPlugin({ template: path.relative(__dirname, 'index.html') }),
+    new HtmlWebpackPlugin({
+      template: resolvePath('src', 'index.html'),
+    }),
     new CleanWebpackPlugin(['dist']),
+    // Enable Hot module for performance improvement during development
+    new webpack.HotModuleReplacementPlugin({}),
   ],
   optimization: {
     runtimeChunk: 'single',

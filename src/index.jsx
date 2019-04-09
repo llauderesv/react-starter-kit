@@ -6,10 +6,11 @@ import configureStore, { history } from './configureStore';
 import App from './components/App';
 
 const store = configureStore();
+const rootElement = document.getElementById('root');
 
 render(
   <Provider store={store}>
-    <App history={history} />
+    <App browserHistory={history} />
   </Provider>,
-  document.getElementById('root')
+  rootElement,
 );

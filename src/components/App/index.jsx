@@ -1,16 +1,28 @@
 import React from 'react';
-import Routes from '../routes';
+import PropTypes from 'prop-types';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import { ConnectedRouter } from 'connected-react-router';
-import { HashRouter } from 'react-router-dom';
+import { history } from '../../configureStore';
+import routes from '../../routes';
 
-const App = ({ history }) => {
+import './index.scss';
+
+const App = ({ browserHistory }) => {
+  const routesArray = routes.map((route, index) => (
+    <Route key={index} {...route} />
+  ));
+
   return (
-    <ConnectedRouter history={history}>
+    <ConnectedRouter history={browserHistory}>
       <HashRouter hashType="noslash">
-        <Routes />
+        <Switch>{routesArray}</Switch>
       </HashRouter>
     </ConnectedRouter>
   );
+};
+
+App.propTypes = {
+  browserHistory: PropTypes.instanceOf(history).isRequired,
 };
 
 export default App;
