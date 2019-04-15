@@ -1,17 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { actionCreators } from '../reducers/counter';
+import { bindActionCreators, compose } from 'redux';
+import { actionCreators as ErrorActionCreators } from '../reducers/error';
+import { actionCreators as CounterActionCreators } from '../reducers/counter';
 
-const Counter = ({ count, increment, decrement }) => {
+const Counter = ({ count, displayError }) => {
   return (
     <div>
       <h1>Current value is: {count} </h1>
-      <button name="increment" onClick={increment}>
-        + Increment
-      </button>
-      <button name="decrement" onClick={decrement}>
-        - Decrement
+      <button
+        name="error"
+        onClick={() =>
+          displayError({ error: 'Test', message: 'Test message' })
+        }>
+        Display Error
       </button>
     </div>
   );
@@ -20,5 +22,9 @@ const Counter = ({ count, increment, decrement }) => {
 // Map Counter State to Counter component
 export default connect(
   state => state.counter,
-  dispatch => bindActionCreators(actionCreators, dispatch),
+  dispatch => {
+    return {
+      displayError: payload => dispatch({ type: 'DISPLAY_ERROR', payload }),
+    };
+  },
 )(Counter);

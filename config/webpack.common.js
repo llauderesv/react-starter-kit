@@ -51,6 +51,7 @@ module.exports = {
           chunks: 'all',
           name: 'vendors',
         },
+        // Optimize CSS minification
         styles: {
           name: 'styles',
           test: /\.css$/,
