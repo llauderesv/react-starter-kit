@@ -1,21 +1,15 @@
-const displayError = 'DISPLAY_ERROR';
-const hideError = 'HIDE_ERROR';
+import { SHOW_ERROR, HIDE_ERROR } from '../actionCreators/error';
 
 const initialState = { stackTrace: null, message: null, isShow: false };
 
-export const actionCreators = {
-  displayError: payload => ({ type: displayError, payload }),
-  hideError: () => ({ type: hideError }),
-};
-
 export const reducer = (state = initialState, action) => {
-  if (action.type === displayError) {
+  if (action.type === SHOW_ERROR) {
     const { error, message } = action.payload; // Get the Error data in payload...
 
     return { isShow: true, stackTrace: error, message };
   }
 
-  if (action.type === hideError) {
+  if (action.type === HIDE_ERROR) {
     return { ...state, isShow: false };
   }
 

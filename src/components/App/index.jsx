@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { ConnectedRouter } from 'connected-react-router';
-import { history } from '../../configureStore';
-import routes from '../../routes';
 import { connect } from 'react-redux';
+import routes from '../../routes';
 
-import './index.scss';
+import Navbar from '../Navbar';
+import Container from 'react-bootstrap/Container';
+import ErrorMessage from '../ErrorMessage';
+
+// import './index.scss';
 
 const App = ({ browserHistory, error }) => {
   const routesArray = routes.map((route, index) => (
@@ -15,18 +18,19 @@ const App = ({ browserHistory, error }) => {
 
   return (
     <ConnectedRouter history={browserHistory}>
-      <div>
-        {error.message && <h1>{error.message}</h1>}
-        <HashRouter hashType="noslash">
+      <Fragment>
+        <Navbar />
+        <ErrorMessage />
+        <Container>
           <Switch>{routesArray}</Switch>
-        </HashRouter>
-      </div>
+        </Container>
+      </Fragment>
     </ConnectedRouter>
   );
 };
 
 App.propTypes = {
-  browserHistory: PropTypes.instanceOf(history).isRequired,
+  browserHistory: PropTypes.object.isRequired,
 };
 
 export default connect(state => ({ error: state.error }))(App);

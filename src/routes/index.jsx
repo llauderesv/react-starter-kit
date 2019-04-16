@@ -1,5 +1,7 @@
 // Import all your components here...
-import Counter from '../components/Counter';
+import Counter from '../components/Examples/Counter';
+import Examples from '../components/Examples';
+import Home from '../components/Home';
 
 /**
  * Object format: {
@@ -12,7 +14,12 @@ const routes = [
   {
     exact: true,
     path: '/',
-    component: Counter,
+    component: Home,
+  },
+  {
+    exact: true,
+    path: '/examples',
+    component: Examples,
   },
 ];
 
