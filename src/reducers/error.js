@@ -2,7 +2,7 @@ import { SHOW_ERROR, HIDE_ERROR } from '../actionCreators/error';
 
 const initialState = { stackTrace: null, message: null, isShow: false };
 
-export const reducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   if (action.type === SHOW_ERROR) {
     const { error, message } = action.payload; // Get the Error data in payload...
 
@@ -17,3 +17,5 @@ export const reducer = (state = initialState, action) => {
 
   return state;
 };
+
+export default reducer;

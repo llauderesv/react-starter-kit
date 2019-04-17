@@ -18,7 +18,7 @@ const cssChunkFilename = IsDevMode ? '[id].css' : '[id].[contenthash].css';
 module.exports = {
   // Entry point where in webpack first looks and serve as main page
   entry: {
-    main: [resolvePath('src', 'index.jsx')],
+    main: ['babel-polyfill', resolvePath('src', 'index.jsx')],
   },
   // Remove file extension when importing JavaScript files or Modules
   resolve: {

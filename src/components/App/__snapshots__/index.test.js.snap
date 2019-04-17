@@ -1,37 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component Should render w/out crashing 1`] = `
-<div>
-  <div>
-    <h1>
-      Current value is: 
-      0
-       
-    </h1>
-    <button
-      name="error"
-      onClick={[Function]}
+Array [
+  <nav
+    className="navbar navbar-expand navbar-dark bg-dark"
+  >
+    <a
+      className="navbar-brand"
+      href="#home"
     >
-      Display Error
-    </button>
-  </div>
-</div>
-`;
-
-exports[`Root component Should render w/out crashing 1`] = `
-<div>
-  <div>
-    <h1>
-      Current value is: 
-      0
-       
-    </h1>
-    <button
-      name="error"
-      onClick={[Function]}
+      Example Brand
+    </a>
+    <div
+      className="mr-auto navbar-nav"
+      onKeyDown={[Function]}
     >
-      Display Error
-    </button>
-  </div>
-</div>
+      <a
+        aria-current={null}
+        className="nav-link"
+        href="/"
+        onClick={[Function]}
+        role="button"
+      >
+        Home
+      </a>
+      <a
+        aria-current={null}
+        className="nav-link"
+        href="/examples"
+        onClick={[Function]}
+        role="button"
+      >
+        Examples
+      </a>
+      <a
+        aria-current={null}
+        className="nav-link"
+        href="/about"
+        onClick={[Function]}
+        role="button"
+      >
+        About
+      </a>
+    </div>
+  </nav>,
+  <div
+    className="app-content"
+  >
+    <div
+      className="jumbotron"
+    >
+      <h1>
+        Welcome to React + Redux + React router Template
+      </h1>
+      <p>
+        This template consist of following integration with React + Redux with the help of React Router and React Saga for handling side effects.
+      </p>
+      <p>
+        <button
+          className="btn btn-primary"
+          disabled={false}
+          type="button"
+        >
+          Learn more
+        </button>
+      </p>
+    </div>
+  </div>,
+]
 `;

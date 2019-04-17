@@ -6,16 +6,16 @@ const NavbarComponent = () => {
   return (
     <Fragment>
       <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">Brand</Navbar.Brand>
+        <Navbar.Brand href="#home">Example Brand</Navbar.Brand>
         <Nav className="mr-auto">
-          <NavLink className="nav-link" role="button" to="/">
+          <NavLink exact className="nav-link" role="button" to="/">
             Home
-          </NavLink>
-          <NavLink className="nav-link" role="button" to="/about">
-            About
           </NavLink>
           <NavLink className="nav-link" role="button" to="/examples">
             Examples
+          </NavLink>
+          <NavLink className="nav-link" role="button" to="/about">
+            About
           </NavLink>
         </Nav>
       </Navbar>

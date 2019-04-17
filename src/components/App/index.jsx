@@ -2,16 +2,16 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
 import { ConnectedRouter } from 'connected-react-router';
-import { connect } from 'react-redux';
 import routes from '../../routes';
 
+// Component section
 import Navbar from '../Navbar';
 import Container from 'react-bootstrap/Container';
 import ErrorMessage from '../ErrorMessage';
 
-// import './index.scss';
+import './index.scss';
 
-const App = ({ browserHistory, error }) => {
+const App = ({ browserHistory }) => {
   const routesArray = routes.map((route, index) => (
     <Route key={index} {...route} />
   ));
@@ -21,9 +21,9 @@ const App = ({ browserHistory, error }) => {
       <Fragment>
         <Navbar />
         <ErrorMessage />
-        <Container>
+        <div className="app-content">
           <Switch>{routesArray}</Switch>
-        </Container>
+        </div>
       </Fragment>
     </ConnectedRouter>
   );
@@ -33,4 +33,4 @@ App.propTypes = {
   browserHistory: PropTypes.object.isRequired,
 };
 
-export default connect(state => ({ error: state.error }))(App);
+export default App;

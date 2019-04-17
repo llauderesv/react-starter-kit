@@ -4,14 +4,17 @@ import { showError, hideError } from '../../actionCreators/error';
 import Button from 'react-bootstrap/Button';
 
 const DisplayErrorMessage = ({ isShow, hideError, showError }) => {
+  const message =
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. A molestias eligendi ' +
+    'culpa iure tempore recusandae totam maiores dolores, expedita accusamus ' +
+    'voluptate deleniti, doloremque quia voluptatibus laudantium soluta exercitationem, aut consectetur.';
+
   return (
     <Fragment>
       <Button
         variant="primary"
         onClick={() =>
-          !isShow
-            ? showError({ error: 'Test Error', message: 'Test message' })
-            : hideError()
+          !isShow ? showError({ error: 'Test Error', message }) : hideError()
         }>
         {' '}
         {!isShow ? 'Display error' : 'Hide error'}

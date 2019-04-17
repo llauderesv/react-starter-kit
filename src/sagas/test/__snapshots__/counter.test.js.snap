@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter Saga Tests incrementAsync Saga test 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "combinator": false,
+  "payload": Object {
+    "args": Array [
+      1000,
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+  "type": "CALL",
+}
+`;
+
+exports[`Counter Saga Tests incrementAsync Saga test 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "combinator": false,
+  "payload": Object {
+    "action": Object {
+      "type": "INC_COUNTER",
+    },
+    "channel": undefined,
+  },
+  "type": "PUT",
+}
+`;
+
+exports[`Counter Saga Tests incrementAsync Saga test 3`] = `undefined`;

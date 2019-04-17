@@ -1,0 +1,323 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User Saga Tests fetchUser Saga test 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "combinator": false,
+  "payload": Object {
+    "action": Object {
+      "payload": Object {
+        "data": Array [
+          Object {
+            "email": "rperigoe0@nature.com",
+            "first_name": "Robinia",
+            "id": 1,
+            "last_name": "Perigoe",
+          },
+          Object {
+            "email": "mabramovic1@blogspot.com",
+            "first_name": "Mycah",
+            "id": 2,
+            "last_name": "Abramovic",
+          },
+          Object {
+            "email": "bchucks2@jiathis.com",
+            "first_name": "Boris",
+            "id": 3,
+            "last_name": "Chucks",
+          },
+          Object {
+            "email": "bfairbourne3@ft.com",
+            "first_name": "Benjamen",
+            "id": 4,
+            "last_name": "Fairbourne",
+          },
+          Object {
+            "email": "bmacellen4@harvard.edu",
+            "first_name": "Beverley",
+            "id": 5,
+            "last_name": "MacEllen",
+          },
+          Object {
+            "email": "dcollisson5@chron.com",
+            "first_name": "Dolli",
+            "id": 6,
+            "last_name": "Collisson",
+          },
+          Object {
+            "email": "kdowdam6@archive.org",
+            "first_name": "Kristin",
+            "id": 7,
+            "last_name": "Dowdam",
+          },
+          Object {
+            "email": "csowthcote7@comsenz.com",
+            "first_name": "Christophe",
+            "id": 8,
+            "last_name": "Sowthcote",
+          },
+          Object {
+            "email": "bscintsbury8@ask.com",
+            "first_name": "Birgitta",
+            "id": 9,
+            "last_name": "Scintsbury",
+          },
+          Object {
+            "email": "mfallon9@cnn.com",
+            "first_name": "Marlena",
+            "id": 10,
+            "last_name": "Fallon",
+          },
+          Object {
+            "email": "afletchera@cpanel.net",
+            "first_name": "Annaliese",
+            "id": 11,
+            "last_name": "Fletcher",
+          },
+          Object {
+            "email": "hwhallb@slashdot.org",
+            "first_name": "Husein",
+            "id": 12,
+            "last_name": "Whall",
+          },
+          Object {
+            "email": "lbackshallc@mozilla.org",
+            "first_name": "Leonie",
+            "id": 13,
+            "last_name": "Backshall",
+          },
+          Object {
+            "email": "dlescopd@gravatar.com",
+            "first_name": "Donnamarie",
+            "id": 14,
+            "last_name": "Lescop",
+          },
+          Object {
+            "email": "mchantrelle@usatoday.com",
+            "first_name": "Madelena",
+            "id": 15,
+            "last_name": "Chantrell",
+          },
+          Object {
+            "email": "scatfordf@apple.com",
+            "first_name": "Shelton",
+            "id": 16,
+            "last_name": "Catford",
+          },
+          Object {
+            "email": "felsmorg@deviantart.com",
+            "first_name": "Fay",
+            "id": 17,
+            "last_name": "Elsmor",
+          },
+          Object {
+            "email": "gcordeletteh@storify.com",
+            "first_name": "Guilbert",
+            "id": 18,
+            "last_name": "Cordelette",
+          },
+          Object {
+            "email": "eollini@cnet.com",
+            "first_name": "Elsworth",
+            "id": 19,
+            "last_name": "Ollin",
+          },
+          Object {
+            "email": "ssireyj@globo.com",
+            "first_name": "Sandro",
+            "id": 20,
+            "last_name": "Sirey",
+          },
+          Object {
+            "email": "rschieferstenk@amazonaws.com",
+            "first_name": "Renell",
+            "id": 21,
+            "last_name": "Schiefersten",
+          },
+          Object {
+            "email": "aclarkl@mapquest.com",
+            "first_name": "Amity",
+            "id": 22,
+            "last_name": "Clark",
+          },
+          Object {
+            "email": "kchilleym@imageshack.us",
+            "first_name": "Karlene",
+            "id": 23,
+            "last_name": "Chilley",
+          },
+          Object {
+            "email": "cmiddletonn@163.com",
+            "first_name": "Chantal",
+            "id": 24,
+            "last_name": "Middleton",
+          },
+          Object {
+            "email": "wfranzelo@ucsd.edu",
+            "first_name": "Warde",
+            "id": 25,
+            "last_name": "Franzel",
+          },
+          Object {
+            "email": "ecawsep@sfgate.com",
+            "first_name": "Elihu",
+            "id": 26,
+            "last_name": "Cawse",
+          },
+          Object {
+            "email": "tarkillq@cyberchimps.com",
+            "first_name": "Tobin",
+            "id": 27,
+            "last_name": "Arkill",
+          },
+          Object {
+            "email": "dnewlinr@usda.gov",
+            "first_name": "Dode",
+            "id": 28,
+            "last_name": "Newlin",
+          },
+          Object {
+            "email": "nherkesss@flickr.com",
+            "first_name": "Nathalia",
+            "id": 29,
+            "last_name": "Herkess",
+          },
+          Object {
+            "email": "sarnaldot@fema.gov",
+            "first_name": "Stern",
+            "id": 30,
+            "last_name": "Arnaldo",
+          },
+          Object {
+            "email": "hslanyu@cbsnews.com",
+            "first_name": "Harcourt",
+            "id": 31,
+            "last_name": "Slany",
+          },
+          Object {
+            "email": "vlocksv@biblegateway.com",
+            "first_name": "Vale",
+            "id": 32,
+            "last_name": "Locks",
+          },
+          Object {
+            "email": "souldcottw@wikia.com",
+            "first_name": "Sayres",
+            "id": 33,
+            "last_name": "Ouldcott",
+          },
+          Object {
+            "email": "jlamballx@sohu.com",
+            "first_name": "Joscelin",
+            "id": 34,
+            "last_name": "Lamball",
+          },
+          Object {
+            "email": "sshaxbyy@twitpic.com",
+            "first_name": "Sigismund",
+            "id": 35,
+            "last_name": "Shaxby",
+          },
+          Object {
+            "email": "eseedhousez@123-reg.co.uk",
+            "first_name": "Eamon",
+            "id": 36,
+            "last_name": "Seedhouse",
+          },
+          Object {
+            "email": "tminget10@gov.uk",
+            "first_name": "Tibold",
+            "id": 37,
+            "last_name": "Minget",
+          },
+          Object {
+            "email": "sbennis11@mail.ru",
+            "first_name": "Starlin",
+            "id": 38,
+            "last_name": "Bennis",
+          },
+          Object {
+            "email": "cyakubowicz12@nationalgeographic.com",
+            "first_name": "Clywd",
+            "id": 39,
+            "last_name": "Yakubowicz",
+          },
+          Object {
+            "email": "jcolleck13@google.es",
+            "first_name": "Juditha",
+            "id": 40,
+            "last_name": "Colleck",
+          },
+          Object {
+            "email": "fgreest14@indiatimes.com",
+            "first_name": "Frazer",
+            "id": 41,
+            "last_name": "Greest",
+          },
+          Object {
+            "email": "gmacer15@cloudflare.com",
+            "first_name": "Greggory",
+            "id": 42,
+            "last_name": "Macer",
+          },
+          Object {
+            "email": "sjonson16@eepurl.com",
+            "first_name": "Shae",
+            "id": 43,
+            "last_name": "Jonson",
+          },
+          Object {
+            "email": "efoulds17@weebly.com",
+            "first_name": "Erek",
+            "id": 44,
+            "last_name": "Foulds",
+          },
+          Object {
+            "email": "acaldecutt18@xinhuanet.com",
+            "first_name": "Alden",
+            "id": 45,
+            "last_name": "Caldecutt",
+          },
+          Object {
+            "email": "bdelboux19@reuters.com",
+            "first_name": "Barbara",
+            "id": 46,
+            "last_name": "d' Elboux",
+          },
+          Object {
+            "email": "lkeigher1a@seattletimes.com",
+            "first_name": "Leonelle",
+            "id": 47,
+            "last_name": "Keigher",
+          },
+          Object {
+            "email": "bmcfetridge1b@diigo.com",
+            "first_name": "Bren",
+            "id": 48,
+            "last_name": "McFetridge",
+          },
+          Object {
+            "email": "nloy1c@aol.com",
+            "first_name": "Nanete",
+            "id": 49,
+            "last_name": "Loy",
+          },
+          Object {
+            "email": "etremeer1d@booking.com",
+            "first_name": "Ede",
+            "id": 50,
+            "last_name": "Tremeer",
+          },
+        ],
+      },
+      "type": "USER_FETCH_SUCCESS",
+    },
+    "channel": undefined,
+  },
+  "type": "PUT",
+}
+`;
+
+exports[`User Saga Tests fetchUser Saga test 2`] = `undefined`;
+
+exports[`User Saga Tests fetchUser Saga test 3`] = `undefined`;

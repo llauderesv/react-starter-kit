@@ -17,9 +17,16 @@ config.entry.main.unshift(
 
 const compiler = webpack(config);
 const server = new webpackDevServer(compiler, {
-  historyApiFallback: true,
+  open: `http://localhost:${PORT}/`, // Automatically open browser when webpack was run
+  historyApiFallback: true, // Enable routing in dev mode
   publicPath: '/',
-  compress: true,
+  compress: true, // For optimization purposes
 });
 
-server.listen(PORT);
+server.listen(PORT, 'localhost', function(error, result) {
+  if (error) {
+    return console.error(error);
+  }
+
+  console.log(`Listening at http://localhost:${PORT}/`);
+});
