@@ -6,8 +6,11 @@ import rootSaga from './sagas';
 
 import App from './components/App';
 
+import './assets/scss/custom.scss';
+
 const store = configureStore();
 sagaMiddleware.run(rootSaga);
+
 const rootElement = document.getElementById('root');
 
 render(

@@ -5,8 +5,8 @@ import { NavLink } from 'react-router-dom';
 const NavbarComponent = () => {
   return (
     <Fragment>
-      <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">Example Brand</Navbar.Brand>
+      <Navbar bg="dark" variant="dark" sticky="top">
+        <Navbar.Brand href="#home">Sykes IS Template</Navbar.Brand>
         <Nav className="mr-auto">
           <NavLink exact className="nav-link" role="button" to="/">
             Home

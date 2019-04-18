@@ -1,0 +1,15 @@
+// Import custom color...
+@import './baseColor';
+
+// Import custom fonts;
+
+// enable predefined border-radius styles on various components.
+$enable-rounded: false;
+
+$enable-responsive-font-sizes: true;
+
+// $input-btn-padding-y: 500px;
+// Create a custom css for styling
+// Override bootstrap core css files
+// Place it to button to replace the value defined in bootstrap with our customize ones...
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';

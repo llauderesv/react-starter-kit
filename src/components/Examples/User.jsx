@@ -21,7 +21,7 @@ const User = ({ data, isFetching, fetchUser }) => {
 
   return (
     <div>
-      <Button variant="primary" onClick={fetchUser}>
+      <Button variant="primary" onClick={fetchUser} disabled={isFetching}>
         Fetch User
       </Button>
       <Table striped bordered hover variant="dark">

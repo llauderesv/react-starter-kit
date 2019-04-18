@@ -6,7 +6,6 @@ import routes from '../../routes';
 
 // Component section
 import Navbar from '../Navbar';
-import Container from 'react-bootstrap/Container';
 import ErrorMessage from '../ErrorMessage';
 
 import './index.scss';

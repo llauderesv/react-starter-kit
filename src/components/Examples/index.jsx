@@ -11,11 +11,12 @@ import User from './User';
 const Examples = () => {
   return (
     <Container>
-      <h1>Example usage of React + Redux</h1>
+      <h1>Example usage in React + Redux</h1>
       <Jumbotron>
         <Row>
           <Col>
             <h2>Counter</h2>
+            <p>Try me!</p>
             <Counter />
           </Col>
         </Row>
@@ -24,7 +25,8 @@ const Examples = () => {
       <Jumbotron>
         <Row>
           <Col>
-            <h2>Dispatching Error message</h2>
+            <h2>Dispatching global error message</h2>
+            <p>Try me!</p>
             <DisplayErrorMessage />
           </Col>
         </Row>
@@ -36,6 +38,7 @@ const Examples = () => {
             <h2>
               Fetching data using Redux saga and storing it in redux store
             </h2>
+            <p>Try me!</p>
             <User />
           </Col>
         </Row>
