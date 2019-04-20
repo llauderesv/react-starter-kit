@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Compose test suite Should return value using compose function 1`] = `6`;

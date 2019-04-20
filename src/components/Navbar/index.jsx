@@ -6,7 +6,9 @@ const NavbarComponent = () => {
   return (
     <Fragment>
       <Navbar bg="dark" variant="dark" sticky="top">
-        <Navbar.Brand href="#home">Sykes IS Template</Navbar.Brand>
+        <NavLink exact className="navbar-brand" to="/">
+          IS APAC Template
+        </NavLink>
         <Nav className="mr-auto">
           <NavLink exact className="nav-link" role="button" to="/">
             Home

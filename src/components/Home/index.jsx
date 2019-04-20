@@ -2,18 +2,22 @@ import React, { Fragment } from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from 'react-bootstrap/Button';
 
+import './index.scss';
+
 const Home = () => {
   return (
     <Fragment>
       <Jumbotron>
-        <h1>Welcome to React + Redux + React router Template</h1>
-        <p>
-          This template consist of following integration with React + Redux with
-          the help of React Router and React Saga for handling side effects.
-        </p>
-        <p>
-          <Button variant="primary">Learn more</Button>
-        </p>
+        <div className="wrapper">
+          <h1>Hello World!</h1>
+          <p>
+            This new template was built using react + redux with the integration
+            of other libraries such as react router for handling Single Page
+            Application and redux saga for handling side effects and react
+            bootstrap for styling.
+          </p>
+          <Button variant="secondary">Learn more</Button>
+        </div>
       </Jumbotron>
     </Fragment>
   );

@@ -3,13 +3,15 @@
 exports[`App component Should render w/out crashing 1`] = `
 Array [
   <nav
-    className="navbar navbar-expand navbar-dark bg-dark"
+    className="navbar navbar-expand navbar-dark bg-dark sticky-top"
   >
     <a
+      aria-current={null}
       className="navbar-brand"
-      href="#home"
+      href="/"
+      onClick={[Function]}
     >
-      Example Brand
+      IS APAC Template
     </a>
     <div
       className="mr-auto navbar-nav"
@@ -50,21 +52,23 @@ Array [
     <div
       className="jumbotron"
     >
-      <h1>
-        Welcome to React + Redux + React router Template
-      </h1>
-      <p>
-        This template consist of following integration with React + Redux with the help of React Router and React Saga for handling side effects.
-      </p>
-      <p>
+      <div
+        className="wrapper"
+      >
+        <h1>
+          Welcome to new IS APAC Template
+        </h1>
+        <p>
+          This new template was built using react + redux and integration of other libraries such as react router for handling Single Page Application and redux saga for handling side effects and react bootstrap for styling.
+        </p>
         <button
-          className="btn btn-primary"
+          className="btn btn-secondary"
           disabled={false}
           type="button"
         >
           Learn more
         </button>
-      </p>
+      </div>
     </div>
   </div>,
 ]
