@@ -4,10 +4,9 @@ import {
   userFetchSuccess,
   userFetchError,
 } from '../actionCreators/user';
+import { delay } from '../utils';
 
 import userData from '../data/user.json';
-
-export const delay = seconds => new Promise(res => setTimeout(res, seconds));
 
 export function* fetchUser() {
   try {

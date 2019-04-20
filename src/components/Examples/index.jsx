@@ -1,9 +1,10 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 
+// Components section
 import Counter from './Counter';
 import DisplayErrorMessage from './DispatchErrorMessage';
 import User from './User';
@@ -12,14 +13,15 @@ import EnhancedHelloWorld from './HigherOrderComponent';
 const Examples = () => {
   return (
     <Container>
-      <h1>Example usage in React + Redux</h1>
+      <h1 style={{ margin: '10px' }}>Examples</h1>
       <Jumbotron>
         <Row>
           <Col>
             <h2>Counter</h2>
             <p>
-              Description: This counter sample is dispatching action using inc
-              and dec with incAsync using redux + saga
+              Description: This counter is sample of dispatching action with
+              changing the state of the app and updating the reducer in your
+              store.
             </p>
             <Counter />
           </Col>
@@ -31,9 +33,8 @@ const Examples = () => {
           <Col>
             <h2>Displaying error message</h2>
             <p>
-              Description: Notify your user that has an error occurred in web
-              app. You could use this while you're fetching and eventually an
-              error.
+              Description: Notify your user when there was a problem in your
+              network connectivity and display it in your web app.
             </p>
             <DisplayErrorMessage />
           </Col>
@@ -43,9 +44,7 @@ const Examples = () => {
       <Jumbotron>
         <Row>
           <Col>
-            <h2>
-              Fetching data using Redux saga and storing it in redux store
-            </h2>
+            <h2>Fetching data in web service</h2>
             <p>Description: Fetching data using redux saga</p>
             <User />
           </Col>

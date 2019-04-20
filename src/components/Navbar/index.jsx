@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 const NavbarComponent = () => {
   return (
     <Fragment>
-      <Navbar bg="dark" variant="dark" sticky="top">
+      <Navbar bg="dark" variant="dark">
         <NavLink exact className="navbar-brand" to="/">
           IS APAC Template
         </NavLink>

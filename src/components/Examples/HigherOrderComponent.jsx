@@ -14,6 +14,4 @@ const enhance = compose(
   withLoader,
 );
 
-const EnhancedHelloWorld = enhance(HelloWorld);
-
-export default EnhancedHelloWorld;
+export default enhance(HelloWorld);

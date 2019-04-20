@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
 import { ConnectedRouter } from 'connected-react-router';
+import { connect } from 'react-redux';
 import routes from '../../routes';
 
 // Component section
@@ -10,7 +11,14 @@ import ErrorMessage from '../ErrorMessage';
 
 import './index.scss';
 
-const App = ({ browserHistory }) => {
+const ErrorMessageWithConnect = connect(
+  state => ({ message: state.error.message }),
+  dispatch => ({
+    hideError: () => dispatch({ type: 'HIDE_ERROR' }),
+  }),
+)(ErrorMessage);
+
+const App = ({ browserHistory, isShow }) => {
   const routesArray = routes.map((route, index) => (
     <Route key={index} {...route} />
   ));
@@ -18,8 +26,10 @@ const App = ({ browserHistory }) => {
   return (
     <ConnectedRouter history={browserHistory}>
       <Fragment>
-        <Navbar />
-        <ErrorMessage />
+        <div className="sticky-top">
+          <Navbar />
+          {isShow && <ErrorMessageWithConnect dismissible />}
+        </div>
         <div className="app-content">
           <Switch>{routesArray}</Switch>
         </div>
@@ -30,6 +40,7 @@ const App = ({ browserHistory }) => {
 
 App.propTypes = {
   browserHistory: PropTypes.object.isRequired,
+  isShow: PropTypes.bool.isRequired,
 };
 
-export default App;
+export default connect(state => ({ isShow: state.error.isShow }))(App);

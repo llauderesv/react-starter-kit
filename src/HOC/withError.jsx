@@ -1,21 +1,17 @@
 import React from 'react';
-import Alert from 'react-bootstrap/Alert';
+import ErrorMessage from '../components/ErrorMessage';
 import Button from 'react-bootstrap/Button';
 
-export default function withError(WrappedComponent) {
-  function Error({ error, fetchEvent, ...restProps }) {
-    return error ? (
-      <Alert variant="danger">
-        <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
-        <p>{error.message}</p>
-        <Button variant="danger" onClick={fetchEvent}>
-          Retry
-        </Button>
-      </Alert>
-    ) : (
-      <WrappedComponent {...restProps} />
-    );
-  }
+const withError = WrappedComponent => ({ error, fetchEvent, ...restProps }) => {
+  return error ? (
+    <ErrorMessage message={error.message}>
+      <Button variant="danger" onClick={fetchEvent}>
+        Retry
+      </Button>
+    </ErrorMessage>
+  ) : (
+    <WrappedComponent {...restProps} />
+  );
+};
 
-  return Error;
-}
+export default withError;
