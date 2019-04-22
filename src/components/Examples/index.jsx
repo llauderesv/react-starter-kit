@@ -9,6 +9,7 @@ import Counter from './Counter';
 import DisplayErrorMessage from './DispatchErrorMessage';
 import User from './User';
 import EnhancedHelloWorld from './HigherOrderComponent';
+import Form from './Forms';
 
 const Examples = () => {
   return (
@@ -58,12 +59,23 @@ const Examples = () => {
               Higher Order Component using compose helper function in
               react-redux library
             </h2>
-            <p>Try me!</p>
             <p>
               Description: This sample is randomly throwing an error. Once there
               was an error you can also retry fetching the data.
             </p>
             <EnhancedHelloWorld />
+          </Col>
+        </Row>
+      </Jumbotron>
+
+      <Jumbotron>
+        <Row>
+          <Col>
+            <h2>Forms</h2>
+            <p>
+              Description: Using forms in react by submitting it to server side.
+            </p>
+            <Form />
           </Col>
         </Row>
       </Jumbotron>
