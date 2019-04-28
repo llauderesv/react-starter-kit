@@ -1,8 +1,10 @@
 import 'babel-polyfill';
 import { put, call } from 'redux-saga/effects';
-import { fetchUser, delay } from '../user';
+import { fetchUser } from '../user';
 import { userFetchSuccess } from '../../actionCreators/user';
 import userData from '../../data/user.json';
+
+import { delay } from '../../utils';
 
 describe('User Saga Tests', () => {
   it('fetchUser Saga test', () => {

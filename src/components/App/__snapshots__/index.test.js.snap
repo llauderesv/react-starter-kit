@@ -2,50 +2,54 @@
 
 exports[`App component Should render w/out crashing 1`] = `
 Array [
-  <nav
-    className="navbar navbar-expand navbar-dark bg-dark sticky-top"
+  <div
+    className="sticky-top"
   >
-    <a
-      aria-current={null}
-      className="navbar-brand"
-      href="/"
-      onClick={[Function]}
-    >
-      IS APAC Template
-    </a>
-    <div
-      className="mr-auto navbar-nav"
-      onKeyDown={[Function]}
+    <nav
+      className="navbar navbar-expand navbar-dark bg-dark"
     >
       <a
         aria-current={null}
-        className="nav-link"
-        href="/"
+        className="navbar-brand"
+        href="#/"
         onClick={[Function]}
-        role="button"
       >
-        Home
+        React
       </a>
-      <a
-        aria-current={null}
-        className="nav-link"
-        href="/examples"
-        onClick={[Function]}
-        role="button"
+      <div
+        className="mr-auto navbar-nav"
+        onKeyDown={[Function]}
       >
-        Examples
-      </a>
-      <a
-        aria-current={null}
-        className="nav-link"
-        href="/about"
-        onClick={[Function]}
-        role="button"
-      >
-        About
-      </a>
-    </div>
-  </nav>,
+        <a
+          aria-current={null}
+          className="nav-link"
+          href="#/"
+          onClick={[Function]}
+          role="button"
+        >
+          Home
+        </a>
+        <a
+          aria-current={null}
+          className="nav-link"
+          href="#/examples"
+          onClick={[Function]}
+          role="button"
+        >
+          Examples
+        </a>
+        <a
+          aria-current={null}
+          className="nav-link"
+          href="#/about"
+          onClick={[Function]}
+          role="button"
+        >
+          About
+        </a>
+      </div>
+    </nav>
+  </div>,
   <div
     className="app-content"
   >
@@ -56,10 +60,10 @@ Array [
         className="wrapper"
       >
         <h1>
-          Welcome to new IS APAC Template
+          Hello World!
         </h1>
         <p>
-          This new template was built using react + redux and integration of other libraries such as react router for handling Single Page Application and redux saga for handling side effects and react bootstrap for styling.
+          This template was built using react and redux with integration of other libraries such as react router for handling routes, redux saga for handling side effects (network request), react bootstrap for styling.
         </p>
         <button
           className="btn btn-secondary"

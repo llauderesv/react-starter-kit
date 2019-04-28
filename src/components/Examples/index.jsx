@@ -1,8 +1,5 @@
 import React from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 
 // Components section
