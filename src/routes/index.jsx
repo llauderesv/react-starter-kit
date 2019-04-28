@@ -1,5 +1,4 @@
 // Import all your components here...
-import Counter from '../components/Examples/Counter';
 import Examples from '../components/Examples';
 import Home from '../components/Home';
 
@@ -17,7 +16,6 @@ const routes = [
     component: Home,
   },
   {
-    exact: true,
     path: '/examples',
     component: Examples,
   },

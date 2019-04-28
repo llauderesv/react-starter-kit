@@ -7,7 +7,7 @@ const NavbarComponent = () => {
     <Fragment>
       <Navbar bg="dark" variant="dark">
         <NavLink exact className="navbar-brand" to="/">
-          IS APAC Template
+          React
         </NavLink>
         <Nav className="mr-auto">
           <NavLink exact className="nav-link" role="button" to="/">
