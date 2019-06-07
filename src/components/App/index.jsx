@@ -1,6 +1,11 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { BrowserRouter as Router, Route, Switch, HashRouter } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  HashRouter,
+} from 'react-router-dom';
 import { ConnectedRouter } from 'connected-react-router';
 import { connect } from 'react-redux';
 import routes from '../../routes';
@@ -27,11 +32,9 @@ const App = ({ browserHistory, isShow }) => {
     <ConnectedRouter history={browserHistory}>
       <HashRouter>
         <Fragment>
-          <div className="sticky-top">
+          <div className="app-content">
             <Navbar />
             {isShow && <ErrorMessageWithConnect dismissible />}
-          </div>
-          <div className="app-content">
             <Switch>{routesArray}</Switch>
           </div>
         </Fragment>

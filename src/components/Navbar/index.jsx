@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 const NavbarComponent = () => {
   return (
     <Fragment>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark" sticky="top">
         <NavLink exact className="navbar-brand" to="/">
           React
         </NavLink>
@@ -13,7 +13,7 @@ const NavbarComponent = () => {
           <NavLink exact className="nav-link" role="button" to="/">
             Home
           </NavLink>
-          <NavLink className="nav-link" role="button" to="/examples">
+          <NavLink className="nav-link" role="button" to="/examples/counter">
             Examples
           </NavLink>
           <NavLink className="nav-link" role="button" to="/about">

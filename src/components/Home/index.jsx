@@ -8,7 +8,7 @@ const Home = _ => {
   return (
     <Jumbotron>
       <div className="wrapper">
-        <h1>Hello World!</h1>
+        <h1>Welcome!</h1>
         <p>
           This template was built using react and redux with integration of
           other libraries such as react router for handling routes, redux saga

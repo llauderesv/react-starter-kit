@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
-import Jumbotron from 'react-bootstrap/Jumbotron';
 
 // Components section
 import Counter from './Counter';
@@ -11,6 +10,10 @@ import Form from './Forms';
 
 import './index.scss';
 
+/**
+ * Collection of examples Component with their details
+ *
+ */
 const examplesComponents = [
   {
     title: 'Counter',
@@ -54,7 +57,7 @@ const withContainerExample = BaseComponent => ({ title, desc }) => {
   return (
     <React.Fragment>
       <h2>{title}</h2>
-      <p>Description: {desc}</p>
+      <p>{desc}</p>
       <BaseComponent />
     </React.Fragment>
   );
@@ -64,52 +67,52 @@ const Examples = ({ match }) => {
   return (
     <div className="examples-wrapper">
       <div className="sidebar">
-        <h3>Component Examples</h3>
-        <ul className="examples-lists">
-          <li>
-            <Link to={`${match.url}/counter`}>Counter</Link>
-          </li>
-          <li>
-            <Link to={`${match.url}/error-message`}>
-              Displaying error message
-            </Link>
-          </li>
-          <li>
-            <Link to={`${match.url}/fetching-data`}>Fetching data</Link>
-          </li>
-          <li>
-            <Link to={`${match.url}/hoc-compose`}>
-              HOC using compose helper function in react-redux library
-            </Link>
-          </li>
-          <li>
-            <Link to={`${match.url}/forms`}>Forms</Link>
-          </li>
-        </ul>
+        <p className="title">Examples</p>
+        <div className="list-container">
+          <ul className="examples-lists">
+            <li>
+              <Link to={`${match.url}/counter`}>Counter</Link>
+            </li>
+            <li>
+              <Link to={`${match.url}/error-message`}>
+                Displaying error message
+              </Link>
+            </li>
+            <li>
+              <Link to={`${match.url}/fetching-data`}>Fetching data</Link>
+            </li>
+            <li>
+              <Link to={`${match.url}/hoc-compose`}>
+                Compose helper function
+              </Link>
+            </li>
+            <li>
+              <Link to={`${match.url}/forms`}>Forms</Link>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div className="content">
-        <Jumbotron>
-          <Switch>
-            {examplesComponents.map((item, id) => {
-              const { path, component } = item;
-              const EnhanceComponent = withContainerExample(component);
+        <Switch>
+          {examplesComponents.map((item, id) => {
+            const { path, component } = item;
+            const EnhanceComponent = withContainerExample(component);
 
-              return (
-                <Route
-                  key={id}
-                  path={`${match.url}${path}`}
-                  render={() => <EnhanceComponent {...item} />}
-                />
-              );
-            })}
-            <Route
-              exact
-              path={`${match.url}`}
-              render={() => <h1>Choose an example.</h1>}
-            />
-          </Switch>
-        </Jumbotron>
+            return (
+              <Route
+                key={id}
+                path={`${match.url}${path}`}
+                render={() => <EnhanceComponent {...item} />}
+              />
+            );
+          })}
+          <Route
+            exact
+            path={`${match.url}`}
+            render={() => <h1>Choose an example.</h1>}
+          />
+        </Switch>
       </div>
     </div>
   );
