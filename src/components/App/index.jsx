@@ -1,11 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  HashRouter,
-} from 'react-router-dom';
+import { Route, Switch, HashRouter } from 'react-router-dom';
 import { ConnectedRouter } from 'connected-react-router';
 import { connect } from 'react-redux';
 import routes from '../../routes';

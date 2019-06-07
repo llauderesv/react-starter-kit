@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
 import {
   incrementCounter,
   decrementCounter,
@@ -9,19 +8,23 @@ import {
 
 import Button from 'react-bootstrap/Button';
 
+import './counter.scss';
+
 const Counter = ({ count, increment, decrement, incrementAsync }) => {
   return (
     <div>
       <p>Current value is: {count} </p>
-      <Button variant="primary" onClick={incrementAsync}>
-        Increment Async +
-      </Button>
-      <Button variant="primary" onClick={increment}>
-        Increment +
-      </Button>
-      <Button variant="danger" onClick={decrement}>
-        Decrement -
-      </Button>
+      <div className="button-container">
+        <Button variant="primary" onClick={increment}>
+          Increment +
+        </Button>
+        <Button variant="danger" onClick={decrement}>
+          Decrement -
+        </Button>
+        <Button variant="primary" onClick={incrementAsync}>
+          Increment Async +
+        </Button>
+      </div>
     </div>
   );
 };

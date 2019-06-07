@@ -15,6 +15,27 @@ const assetFilename = IsDevMode ? '[name].[ext]' : '[name].[hash].[ext]';
 const cssFilename = IsDevMode ? '[name].css' : '[name].[contenthash].css';
 const cssChunkFilename = IsDevMode ? '[id].css' : '[id].[contenthash].css';
 
+// Webpack list of plugins
+let plugins = [
+  new MiniCssExtractPlugin({
+    filename: `styles/${cssFilename}`,
+    chunkFilename: `styles/${cssChunkFilename}`,
+  }),
+  /**
+   * Minified CSS compilation
+   */
+  new OptimizeCssAssetsPlugin({}),
+  new HtmlWebpackPlugin({
+    template: resolvePath('src', 'index.html'),
+  }),
+  new CleanWebpackPlugin(['build']),
+];
+
+if (IsDevMode) {
+  // Enable Hot module for performance improvement during development
+  plugins = plugins.concat(new webpack.HotModuleReplacementPlugin({}));
+}
+
 module.exports = {
   // Entry point where in webpack first looks and serve as main page
   entry: {
@@ -24,26 +45,11 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
-  // Webpack Plugins
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: `styles/${cssFilename}`,
-      chunkFilename: `styles/${cssChunkFilename}`,
-    }),
-    /**
-     * Minified CSS compilation
-     */
-    new OptimizeCssAssetsPlugin({}),
-    new HtmlWebpackPlugin({
-      template: resolvePath('src', 'index.html'),
-    }),
-    new CleanWebpackPlugin(['dist']),
-    // Enable Hot module for performance improvement during development
-    new webpack.HotModuleReplacementPlugin({}),
-  ],
+  plugins: plugins,
   optimization: {
     runtimeChunk: 'single',
     splitChunks: {
+      minSize: 0,
       chunks: 'all',
       cacheGroups: {
         vendor: {
@@ -57,6 +63,15 @@ module.exports = {
           test: /\.css$/,
           chunks: 'all',
           enforce: true,
+        },
+        /**
+         * Create a separate js files for all components that shared within the App.
+         *
+         * */
+        commons: {
+          name: 'commons',
+          chunks: 'all',
+          minChunks: 2,
         },
       },
     },

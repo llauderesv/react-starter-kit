@@ -17,31 +17,40 @@ import './index.scss';
 const examplesComponents = [
   {
     title: 'Counter',
-    desc:
-      'This counter is sample of dispatching action with ' +
-      'changing the state of the app and updating the reducer in your store.',
+    desc: `
+      This counter example is used to demonstrate how to call an 
+      action in redux by dispatching actionCreators to increment the value in counter reducer. 
+      We also used an increment async to demonstrate how asynchronous action works.
+    `,
     path: '/counter',
     component: Counter,
   },
   {
-    title: 'Displaying error message',
-    desc:
-      'Notify your user when there was a problem in your network ' +
-      'connectivity and display it in your web app.',
+    title: 'Displaying global message',
+    desc: `
+      Used to notify user's when there's an error or a problem in network
+      connectivity and display it in your web app.`,
     path: '/error-message',
     component: DisplayErrorMessage,
   },
   {
-    title: 'Fetching data in web service',
-    desc: 'Description: Fetching data using redux saga',
+    title: 'Fetched data in API',
+    desc: `
+      This example is fetching data in web service using redux-saga
+    `,
     path: '/fetching-data',
     component: User,
   },
   {
-    title: 'Higher Order Component using compose function',
-    desc:
-      'This sample is randomly throwing an error. Once there was an ' +
-      'error you can also retry fetching the data.',
+    title: 'Compose',
+    desc: `
+      Compose helper function is a technique or pattern that emerges in Functional programming.
+      It's used to combine multiple functions into one and return an enhance function.
+      Why this important? Remember, in React when you're creating a component you should always
+      keep in mind that your component is composable meaning it can be used by other component w/out
+      using too much dependencies or boilerplate code. If you want to dive in depth you can read the whole article here with a great example.
+      https://hackernoon.com/javascript-functional-composition-for-every-day-use-22421ef65a10
+    `,
     path: '/hoc-compose',
     component: EnhancedHelloWorld,
   },

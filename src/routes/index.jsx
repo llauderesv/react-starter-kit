@@ -1,13 +1,9 @@
-// Import all your components here...
 import Examples from '../components/Examples';
 import Home from '../components/Home';
 
 /**
- * Object format: {
- *  exact: true,
- *  path: '/',
- *  component: Counter,
- * }
+ * Collection of component routes
+ *
  */
 const routes = [
   {

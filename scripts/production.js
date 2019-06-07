@@ -25,6 +25,7 @@ webpack(config, (error, stats) => {
     console.warn(info.warnings);
   }
 
+  console.log(`Building file into Production.`);
   console.log(
     stats.toString({
       chunks: true, // Makes the build much quieter

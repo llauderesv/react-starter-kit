@@ -1,8 +1,8 @@
 import React from 'react';
 import Spinner from 'react-bootstrap/Spinner';
 
-const withLoader = WrappedComponent => ({ isLoading, ...restProps }) => {
-  return isLoading ? (
+const Loader = () => {
+  return (
     <div>
       <Spinner animation="border" role="status">
         <span className="sr-only">Loading...</span>
@@ -11,9 +11,11 @@ const withLoader = WrappedComponent => ({ isLoading, ...restProps }) => {
         Loading...
       </h1>
     </div>
-  ) : (
-    <WrappedComponent {...restProps} />
   );
+};
+
+const withLoader = WrappedComponent => ({ isLoading, ...restProps }) => {
+  return isLoading ? <Loader /> : <WrappedComponent {...restProps} />;
 };
 
 export default withLoader;

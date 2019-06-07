@@ -8,6 +8,6 @@ module.exports = merge(common, {
   devtool: 'source-map',
   output: {
     filename: 'scripts/[name].[contenthash].js',
-    path: path.resolve(process.cwd(), 'dist', 'build'),
+    path: path.resolve(process.cwd(), 'build'),
   },
 });
