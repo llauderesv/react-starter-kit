@@ -4,11 +4,11 @@ import {
   incrementCounter,
   decrementCounter,
   incrementAsyncCounter,
-} from '../../actionCreators/counter';
+} from '../../../actionCreators/counter';
 
 import Button from 'react-bootstrap/Button';
 
-import './counter.scss';
+import './index.scss';
 
 const Counter = ({ count, increment, decrement, incrementAsync }) => {
   return (

@@ -1,0 +1,10 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  button {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+}

@@ -1,27 +1,27 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
+import sykesLogo from '../../assets/images/sykesLogo.png';
+
 const NavbarComponent = () => {
   return (
-    <Fragment>
-      <Navbar bg="dark" variant="dark" sticky="top">
-        <NavLink exact className="navbar-brand" to="/">
-          React
+    <Navbar bg="light" variant="light" sticky="top">
+      <NavLink exact className="navbar-brand" to="/">
+        <img src={sykesLogo} />
+      </NavLink>
+      <Nav className="mr-auto">
+        <NavLink exact className="nav-link" role="button" to="/">
+          Home
         </NavLink>
-        <Nav className="mr-auto">
-          <NavLink exact className="nav-link" role="button" to="/">
-            Home
-          </NavLink>
-          <NavLink className="nav-link" role="button" to="/examples/counter">
-            Examples
-          </NavLink>
-          <NavLink className="nav-link" role="button" to="/about">
-            About
-          </NavLink>
-        </Nav>
-      </Navbar>
-    </Fragment>
+        <NavLink className="nav-link" role="button" to="/examples/counter">
+          Examples
+        </NavLink>
+        <NavLink className="nav-link" role="button" to="/about">
+          About
+        </NavLink>
+      </Nav>
+    </Navbar>
   );
 };
 

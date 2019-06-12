@@ -1,6 +1,6 @@
 /*eslint-disable */
-const webpack = require('webpack');
 const resolvePath = require('./path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -57,7 +57,10 @@ module.exports = {
           chunks: 'all',
           name: 'vendors',
         },
-        // Optimize CSS minification
+        /**
+         * Optimize CSS minification
+         *
+         */
         styles: {
           name: 'styles',
           test: /\.css$/,
@@ -65,7 +68,8 @@ module.exports = {
           enforce: true,
         },
         /**
-         * Create a separate js files for all components that shared within the App.
+         * Create a separate js files for all
+         * components that shared within the App.
          *
          * */
         commons: {
@@ -79,18 +83,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(jsx?)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: ['env', 'react', 'stage-3'],
-            plugins: ['transform-object-rest-spread'],
-          },
         },
       },
       {
-        test: /\.(sc|c)ss$/,
+        test: /\.s?css$/,
         use: [
           IsDevMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',

@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 
-import { userFetchRequested } from '../../actionCreators/user';
+import { userFetchRequested } from '../../../actionCreators/user';
+
+import './index.scss';
 
 const User = ({ data, isFetching, fetchUser }) => {
   const tableBody = data.map(user => {
@@ -20,11 +22,11 @@ const User = ({ data, isFetching, fetchUser }) => {
   });
 
   return (
-    <div>
+    <div className="wrapper">
       <Button variant="primary" onClick={fetchUser} disabled={isFetching}>
         Fetch User
       </Button>
-      <Table striped bordered hover variant="light">
+      <Table striped bordered hover variant="dark">
         <thead>
           <tr>
             <th>ID</th>
@@ -36,7 +38,15 @@ const User = ({ data, isFetching, fetchUser }) => {
         <tbody>
           {isFetching ? (
             <tr>
-              <td colSpan={4}>Loading...</td>
+              <td colSpan={4} style={{ textAlign: 'center' }}>
+                Loading...
+              </td>
+            </tr>
+          ) : !tableBody.length ? (
+            <tr>
+              <td colSpan={4} style={{ textAlign: 'center' }}>
+                No data available
+              </td>
             </tr>
           ) : (
             tableBody

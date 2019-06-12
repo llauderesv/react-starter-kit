@@ -4,9 +4,13 @@
 // Import custom fonts;
 
 // enable predefined border-radius styles on various components.
-$enable-rounded: false;
+// $enable-rounded: false;
 
 $enable-responsive-font-sizes: true;
+
+nav {
+  box-shadow: 0px 5px 9px 0px #d4d4d4;
+}
 
 // $input-btn-padding-y: 500px;
 // Create a custom css for styling

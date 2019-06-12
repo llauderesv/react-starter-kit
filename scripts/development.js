@@ -15,11 +15,12 @@ config.entry.main.unshift(
   'webpack/hot/dev-server',
 );
 
+// Initialize a webpack configuration...
 const compiler = webpack(config);
 const server = new webpackDevServer(compiler, {
   open: `http://localhost:${PORT}/`, // Automatically open browser when webpack was run
-  historyApiFallback: true, // Enable routing in dev mode
   publicPath: '/',
+  historyApiFallback: true, // Enable routing in dev mode
   compress: true, // For optimization purposes
 });
 

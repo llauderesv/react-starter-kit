@@ -43,6 +43,10 @@
             display: block;
           }
 
+          .active {
+            color: #000;
+          }
+
           &:hover > a {
             color: #000;
           }

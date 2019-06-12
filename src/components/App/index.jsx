@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch, HashRouter } from 'react-router-dom';
 import { ConnectedRouter } from 'connected-react-router';
@@ -26,13 +26,11 @@ const App = ({ browserHistory, isShow }) => {
   return (
     <ConnectedRouter history={browserHistory}>
       <HashRouter>
-        <Fragment>
-          <div className="app-content">
-            <Navbar />
-            {isShow && <ErrorMessageWithConnect dismissible />}
-            <Switch>{routesArray}</Switch>
-          </div>
-        </Fragment>
+        <div className="app-content">
+          <Navbar />
+          {isShow && <ErrorMessageWithConnect dismissible />}
+          <Switch>{routesArray}</Switch>
+        </div>
       </HashRouter>
     </ConnectedRouter>
   );

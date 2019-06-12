@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route, Switch } from 'react-router-dom';
+import { NavLink, Route, Switch } from 'react-router-dom';
 
 // Components section
 import Counter from './Counter';
@@ -34,7 +34,7 @@ const examplesComponents = [
     component: DisplayErrorMessage,
   },
   {
-    title: 'Fetched data in API',
+    title: 'Fetching data in Web Service',
     desc: `
       This example is fetching data in web service using redux-saga
     `,
@@ -56,7 +56,9 @@ const examplesComponents = [
   },
   {
     title: 'Forms',
-    desc: 'Using forms in react by submitting it to server side.',
+    desc: `
+      When talking forms in react we used a third party library to handle form validation which is Formik.
+    `,
     path: '/forms',
     component: Form,
   },
@@ -80,23 +82,23 @@ const Examples = ({ match }) => {
         <div className="list-container">
           <ul className="examples-lists">
             <li>
-              <Link to={`${match.url}/counter`}>Counter</Link>
+              <NavLink to={`${match.url}/counter`}>Counter</NavLink>
             </li>
             <li>
-              <Link to={`${match.url}/error-message`}>
+              <NavLink to={`${match.url}/error-message`}>
                 Displaying error message
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to={`${match.url}/fetching-data`}>Fetching data</Link>
+              <NavLink to={`${match.url}/fetching-data`}>Fetching data</NavLink>
             </li>
             <li>
-              <Link to={`${match.url}/hoc-compose`}>
+              <NavLink to={`${match.url}/hoc-compose`}>
                 Compose helper function
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to={`${match.url}/forms`}>Forms</Link>
+              <NavLink to={`${match.url}/forms`}>Forms</NavLink>
             </li>
           </ul>
         </div>

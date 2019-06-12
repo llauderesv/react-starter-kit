@@ -10,12 +10,12 @@ const Home = () => {
       <div className="wrapper">
         <h1>Hello, Welcome!</h1>
         <p>
-          This template is created using react and redux with some integration
-          of other libraries such as react-router for handling routing,
-          redux-saga for handling side effects (eg: network request) and also react
-          bootstrap for styling pages.
+          This template was created using React + Redux with some other
+          integration libraries such as React-Router for handling routing,
+          Redux-saga for handling side effects (eg: network request) and also
+          React bootstrap for styling pages.
         </p>
-        <Button variant="secondary">Learn more</Button>
+        <Button variant="primary">Learn more</Button>
       </div>
     </Jumbotron>
   );
