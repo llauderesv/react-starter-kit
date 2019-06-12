@@ -15,7 +15,7 @@ const Home = () => {
           Redux-saga for handling side effects (eg: network request) and also
           React bootstrap for styling pages.
         </p>
-        <Button variant="primary">Learn more</Button>
+        <Button variant="secondary">Learn more</Button>
       </div>
     </Jumbotron>
   );

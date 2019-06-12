@@ -15,13 +15,13 @@ const Counter = ({ count, increment, decrement, incrementAsync }) => {
     <div>
       <p>Current value is: {count} </p>
       <div className="button-container">
-        <Button variant="primary" onClick={increment}>
+        <Button variant="secondary" onClick={increment}>
           Increment +
         </Button>
-        <Button variant="danger" onClick={decrement}>
+        <Button variant="primary" onClick={decrement}>
           Decrement -
         </Button>
-        <Button variant="primary" onClick={incrementAsync}>
+        <Button variant="secondary" onClick={incrementAsync}>
           Increment Async +
         </Button>
       </div>
