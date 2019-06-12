@@ -45,7 +45,7 @@ const BootstrapFormWithFormik = () => {
   return (
     <Formik
       initialValues={{
-        email: 'llauderesv@gmail.com',
+        email: 'test@email.com',
         password: 'test',
         checkbox: true,
       }}

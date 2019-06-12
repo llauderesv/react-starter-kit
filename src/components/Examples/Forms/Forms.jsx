@@ -16,6 +16,7 @@ const FormComponent = ({
       <Form.Group controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control
+          name="email"
           type="email"
           placeholder="Enter email"
           onChange={handleChange}
@@ -30,6 +31,7 @@ const FormComponent = ({
       <Form.Group controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
         <Form.Control
+          name="password"
           type="password"
           placeholder="Password"
           onChange={handleChange}
@@ -39,11 +41,10 @@ const FormComponent = ({
       </Form.Group>
       <Form.Group controlId="formBasicCheckBox">
         <Form.Check
+          name="check-me-out"
           type="checkbox"
           label="Check me out"
-          onChange={() => {
-            setFieldValue('checkbox', !values.checkbox);
-          }}
+          onChange={() => setFieldValue('checkbox', !values.checkbox)}
           checked={values.checkbox}
         />
       </Form.Group>
