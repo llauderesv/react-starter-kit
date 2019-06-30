@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { showError, hideError } from '../../actionCreators/error';
 import Button from 'react-bootstrap/Button';
@@ -10,16 +10,15 @@ const DisplayErrorMessage = ({ isShow, hideError, showError }) => {
     'voluptate deleniti, doloremque quia voluptatibus laudantium soluta exercitationem, aut consectetur.';
 
   return (
-    <Fragment>
+    <>
       <Button
         variant="primary"
         onClick={() =>
           !isShow ? showError({ error: 'Test Error', message }) : hideError()
         }>
-        {' '}
         {!isShow ? 'Display error' : 'Hide error'}
       </Button>
-    </Fragment>
+    </>
   );
 };
 

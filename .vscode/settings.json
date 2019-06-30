@@ -1,7 +1,7 @@
 {
-  "appService.zipIgnorePattern": [
-    ".vscode{,/**}"
-  ],
+  "appService.zipIgnorePattern": [".vscode{,/**}"],
   "appService.defaultWebAppToDeploy": "",
-  "appService.deploySubpath": "build"
+  "appService.deploySubpath": "build",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontSize": 11
 }
