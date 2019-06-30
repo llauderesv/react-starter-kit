@@ -5,26 +5,30 @@ exports[`App component Should render w/out crashing 1`] = `
   className="app-content"
 >
   <nav
-    className="navbar navbar-expand navbar-dark bg-dark sticky-top"
+    className="navbar navbar-expand navbar-light bg-light sticky-top"
   >
     <a
-      aria-current={null}
-      className="navbar-brand"
+      aria-current="page"
+      className="navbar-brand active"
       href="#/"
       onClick={[Function]}
+      style={Object {}}
     >
-      React
+      <img
+        src="test-file-stub"
+      />
     </a>
     <div
       className="mr-auto navbar-nav"
       onKeyDown={[Function]}
     >
       <a
-        aria-current={null}
-        className="nav-link"
+        aria-current="page"
+        className="nav-link active"
         href="#/"
         onClick={[Function]}
         role="button"
+        style={Object {}}
       >
         Home
       </a>
@@ -55,10 +59,10 @@ exports[`App component Should render w/out crashing 1`] = `
       className="wrapper"
     >
       <h1>
-        Welcome!
+        Hello, Welcome!
       </h1>
       <p>
-        This template was built using react and redux with integration of other libraries such as react router for handling routes, redux saga for handling side effects (network request), react bootstrap for styling.
+        This template was created using React + Redux with some other integration libraries such as React-Router for handling routing, Redux-saga for handling side effects (eg: network request) and also React bootstrap for styling pages.
       </p>
       <button
         className="btn btn-secondary"

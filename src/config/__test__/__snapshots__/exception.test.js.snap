@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Exception Suite Should throw validation exception 1`] = `"Invalid parameter passed."`;
+
+exports[`Exception Suite Should throw validation exception 2`] = `"ValidationException"`;
