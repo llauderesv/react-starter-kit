@@ -3,5 +3,6 @@
   "appService.defaultWebAppToDeploy": "",
   "appService.deploySubpath": "build",
   "editor.fontFamily": "Fira Code",
-  "editor.fontSize": 11
+  "editor.fontSize": 11,
+  "editor.detectIndentation": false
 }

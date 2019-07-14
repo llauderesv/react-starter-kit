@@ -8,16 +8,10 @@ import { compose } from 'redux';
 
 import withFetch from '../withFetch';
 
-const HelloWorld = _ => <h1>Hello World</h1>;
+const HelloWorld = ({ testProps }) => <h1>Hello World {testProps}</h1>;
 
-describe('Higher Order Component test suite.', () => {
-  it('Should render withError component.', () => {
-    const enhance = compose(
-      withFetch,
-      withError,
-      withLoading,
-    );
-
+describe('HOC test suite.', () => {
+  it('Should render HelloWorld component.', () => {
     // HelloWorld -> withLoading -> withError -> withFetch
     /**
      * withLoading Component Receives HelloWorld Component
@@ -27,8 +21,11 @@ describe('Higher Order Component test suite.', () => {
      * withFetch Component Receives HelloWorld Component
      *
      */
-
-    const EnhancedHelloWorld = enhance(HelloWorld);
+    const EnhancedHelloWorld = compose(
+      withFetch,
+      withError,
+      withLoading,
+    )(HelloWorld);
     const app = TestRenderer.create(<EnhancedHelloWorld testProps={'test'} />);
 
     const tree = app.toJSON();

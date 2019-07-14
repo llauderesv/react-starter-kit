@@ -43,7 +43,7 @@ module.exports = {
   },
   // Remove file extension when importing JavaScript files or Modules
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.tsx', '.ts'],
   },
   plugins: plugins,
   optimization: {
@@ -95,6 +95,13 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
+        },
+      },
+      {
+        test: /\.(tsx?)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'ts-loader',
         },
       },
       {

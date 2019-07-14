@@ -65,6 +65,7 @@
     "redux": "4.0.1",
     "redux-logger": "3.0.6",
     "redux-saga": "1.0.2",
-    "redux-thunk": "2.3.0"
+    "redux-thunk": "2.3.0",
+    "ts-loader": "6.0.4"
   }
 }

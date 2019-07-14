@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Higher Order Component test suite. Should render withError component. 1`] = `
+exports[`HOC test suite. Should render HelloWorld component. 1`] = `
 <h1>
-  Hello World
+  Hello World 
+  test
 </h1>
 `;

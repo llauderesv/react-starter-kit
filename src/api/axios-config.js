@@ -1,18 +1,13 @@
 import axios from 'axios';
 
-// Response interceptors when there's something error in the network...
-axios.interceptors.response.use(
-  function(response) {
-    return response;
-  },
-  function(error) {
-    return Promise.reject(error);
-  },
-);
-
+/**
+ *
+ * Setup axios API by defining your own setup rules
+ * https://kapeli.com/cheat_sheets/Axios.docset/Contents/Resources/Documents/index
+ */
 const instance = axios.create({
   baseURL: null,
-  timeout: 1000,
+  timeout: 1500,
   headers: {
     Authorization: null,
   },
