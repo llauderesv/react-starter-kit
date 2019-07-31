@@ -17,8 +17,8 @@
   },
   "plugins": ["react"],
   "rules": {
+    // "react/forbid-prop-types": [true, {"forbid": ["object"]}],
     "arrow-body-style": ["error", "always"],
-    "react/forbid-prop-types": [true, {"forbid": ["object"]}],
     "arrow-parens": ["error", "as-needed"]
   }
 }

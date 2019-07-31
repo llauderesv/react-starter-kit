@@ -28,7 +28,7 @@
     "babel-polyfill": "6.26.0",
     "clean-webpack-plugin": "1.0.1",
     "css-loader": "2.1.0",
-    "eslint": "5.15.1",
+    "eslint": "6.1.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-plugin-import": "2.16.0",
     "eslint-plugin-jsx-a11y": "6.2.1",
